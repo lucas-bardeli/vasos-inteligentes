@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VasosInteligentes.Models;
 
+[BsonIgnoreExtraElements]
 public class User
 {
     [BsonId]
