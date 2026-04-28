@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["title"] = "Login";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<h1>Login</h1>
+
+<div class="text-danger" asp-validation-summary="All"></div>
+<form asp-action="Login" method="POST">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" name="email" class="form-control" />
+        <label>Senha</label>
+        <input type="password" name="senha" class="form-control" />
+        <button type="submit" class="btn btn-primary mt-4">Enviar</button>
+    </div>
+</form>
+
+<p class="mt-4">
+    <a asp-controller="Accounts" asp-action="ForgotPassword">Esqueci minha senha</a>
+</p>
